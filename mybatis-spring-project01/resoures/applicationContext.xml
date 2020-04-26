@@ -7,11 +7,11 @@
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
-<!--    载入jdbc.properties 数据库配置文件-->
+    <!--    载入jdbc.properties 数据库配置文件-->
     <context:property-placeholder location="jdbc.properties"/>
-<!--    配置DataSource 动态代理 配置结束方法，使用完直接close-->
+    <!--    配置DataSource 动态代理 配置结束方法，使用完直接close-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-<!--        读取jdbc文件中的各个字段 并与其绑定-->
+        <!--        读取jdbc文件中的各个字段 并与其绑定-->
         <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
@@ -19,14 +19,15 @@
         <property name="maxActive" value="10"/>
         <property name="maxIdle" value="5"/>
     </bean>
-<!--    配置SQLSessionFactory动态代理-->
-    <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-<!--        加载SqlMapConfig.xml文件-->
-        <property name="configLocation" value="SqlMapConfig.xml"/>
-<!--        加载dataSource-->
-        <property name="dataSource" value="dataSource"/>
+    <!--    配置SQLSessionFactory动态代理-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 关联mybatis配置文件,SqlMapconfig.xml -->
+        <property name="configLocation" value="SqlMapConfig.xml"></property>
+        <property name="dataSource" ref="dataSource"></property>
     </bean>
-
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.mo"></property>
+    </bean>
 
 
 </beans>

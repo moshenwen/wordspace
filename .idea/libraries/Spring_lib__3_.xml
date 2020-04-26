@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Spring-lib (3)">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/spring-porject01/Spring-lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/spring-porject01/Spring-lib" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/spring-porject01/Spring-lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/spring-porject01/Spring-lib" recursive="false" type="SOURCES" />
+  </library>
+</component>

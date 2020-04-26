@@ -1,10 +1,10 @@
-package com.mo.pojo;
+package com.mo.beans;
 
 import java.util.Date;
 
 /**
  * @Author : MOSHEN
- * @Date :2020/4/26 12:39
+ * @Date :2020/4/25 12:58
  * @Description :
  **/
 public class User {
@@ -63,5 +63,16 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public User(int id, String user, String sex, Date birthday, int age) {
+        this.id = id;
+        this.user = user;
+        this.sex = sex;
+        this.birthday = birthday;
+        this.age = age;
+    }
+
+    public User() {
     }
 }

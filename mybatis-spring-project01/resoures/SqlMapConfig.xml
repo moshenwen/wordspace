@@ -17,11 +17,11 @@
     <typeAliases>
         <!--  单个别名定义      -->
         <!--  type : 包名路径  , alias : 别名名称      -->
-        <typeAlias type="com,mo.mybatis.User" alias="user"/>
+<!--        <typeAlias type="com,mo.mybatis.User" alias="user"/>-->
         <!-- 批量定义别名 ,扫描整个包下的类,别名为类名(大小写都可以) -->
-        <!--
-        <package name="com.mo.mybatis"/>
-         -->
+
+        <package name="com.mo.pojo"/>
+
     </typeAliases>
 <!--配置数据库连接方式-->
 <!--    <environments default="mysql">-->
@@ -44,18 +44,18 @@
     <!--  关联mapper.xml文件  -->
     <mappers>
         <!--  相对类路径映射器  -->
-        <!--
-        <mapper resource="com/mo/mybatis/mapper/OrderMapper.xml"/>
-        -->
+
+<!--        <mapper resource="com/mo/dao/UserMapper.xml"/>-->
+
         <!--    类接口映射器    -->
-        <!--
-          <mapper class="com.mo.mybatis.mapper.OrderMapper.xml"/>
-          -->
+
+<!--          <mapper class="com.mo.dao.UserMapper.xml"/>-->
+
         <!--    指定包所有下的接口    -->
         <!-- 这种方式配置需要mapper接口名称和mapper映射文件相同，且放在同一目录下-->
-        <!--
-          <package class="com.mo.mybatis.mapper"/>
-          -->
+
+          <package name="com.mo.dao"/>
+
         <!--这是告诉Mybatis区哪找持久化类的映射文件，对于在src下的文件直接写文件名，
             如果在某包下，则要写明路径,如：com/mybatistest/config/User.xml-->
 <!--        <mapper resource="com/mo/dao/UserMapper.xml"/>-->

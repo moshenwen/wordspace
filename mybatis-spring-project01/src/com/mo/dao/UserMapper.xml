@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+    <!-- 配置命名空间 -->
+   <mapper namespace="com.mo.dao.UserMapper">
+   		<!-- 
+   		 - 标签 : select insert update delete 等
+   		 - id : id属性,SQLSession根据该属性查找
+   		 - parameterType :入参属性
+   		 - resultType : 出参属性
+   		 - 数据库查询语句
+   		 - #{} 可以第三方值
+   		 - ${} 只可以Java数据
+   		 -->
+   		<select id="userInsertAll" parameterType="user" resultType="user">
+            select * from user
+        </select>
+   </mapper>

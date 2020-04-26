@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    <!-- 配置命名空间 -->
+   <mapper namespace="test">
+   		<!--
+   		 - 查询标签
+   		 - id : id属性,SQLSession根据该属性查找
+   		 - parameterType :入参属性
+   		 - resultType : 出参属性
+   		 - 数据库查询语句
+   		 - #{}
+   		 - ${}
+   		 -->
+    <insert id="userInsert" parameterType="com.mo.beans.User" >
+        insert into mybatis.user values(#{id},#{user},#{sex},#{birthday},#{age})
+    </insert>
+    <select id="userQuery" parameterType="com.mo.beans.User" resultType="com.mo.beans.User">
+        select * from user where id=#{id}
+    </select>
+
+   </mapper>

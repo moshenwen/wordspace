@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mabatis-dao/mabatis-dao.iml" filepath="$PROJECT_DIR$/mabatis-dao/mabatis-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-mapper/mybatis-mapper.iml" filepath="$PROJECT_DIR$/mybatis-mapper/mybatis-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-spring-project01/mybatis-spring-project01.iml" filepath="$PROJECT_DIR$/mybatis-spring-project01/mybatis-spring-project01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-porject01/spring-porject01.iml" filepath="$PROJECT_DIR$/spring-porject01/spring-porject01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wordspace.iml" filepath="$PROJECT_DIR$/wordspace.iml" />
+    </modules>
+  </component>
+</project>
